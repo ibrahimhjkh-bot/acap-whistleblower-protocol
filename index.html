@@ -1,277 +1,261 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overcoming the Whistleblower's Dilemma via Zero-Knowledge Threshold Escrow Architecture</title>
+<style>
+@page { size: 210mm 297mm; margin: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { background-color: #ffffff; }
+@media (prefers-color-scheme: dark) {
+  html { background-color: #0d1117; }
+}
+body {
+  padding: 24px 0;
+  margin: 0 auto;
+  max-width: 900px !important;
+  background: transparent !important;
+  font-family: 'Times New Roman', Times, serif;
+  color: #111827;
+  line-height: 1.5;
+}
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 12px auto;
+  padding: 20mm 20mm 15mm 20mm;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  font-size: 10.5pt;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 600px) {
+  body { padding: 8px 0; }
+  .page { width: 100%; margin: 0 auto; border: none; padding: 16px; box-shadow: none; }
+}
+.page-content { flex: 1 1 0; min-height: 0; }
+.page-content > * + * { margin-top: 16px; }
+.page-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  padding-top: 4mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8.5pt;
+  color: #4b5563;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  border-top: 1px solid #d1d5db;
+}
+.paper-title {
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  color: #111827;
+}
+.paper-subtitle {
+  font-size: 11pt;
+  font-style: italic;
+  text-align: center;
+  color: #374151;
+  margin-bottom: 14px;
+}
+.author-block {
+  text-align: center;
+  font-size: 9.5pt;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.abstract-box {
+  margin: 0 10px;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #1d4ed8;
+  font-size: 9.5pt;
+  line-height: 1.45;
+}
+.abstract-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 8.5pt;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+h2 {
+  font-size: 11.5pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #111827;
+  border-bottom: 1px solid #111827;
+  padding-bottom: 2px;
+  margin-top: 18px;
+}
+p { margin: 0; text-align: justify; text-indent: 1.5em; }
+p.no-indent { text-indent: 0; }
+.cite { color: #1d4ed8; text-decoration: none; }
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 9pt;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.matrix-table th, .matrix-table td {
+  border: 1px solid #d1d5db;
+  padding: 6px 10px;
+  text-align: center;
+}
+.matrix-table th { background-color: #f3f4f6; font-weight: 600; }
+.diagram-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 8pt;
+  white-space: pre;
+  overflow-x: auto;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+ol.references {
+  font-size: 8.5pt;
+  padding-left: 18px;
+  margin: 0;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+ol.references li { margin-bottom: 6px; }
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Overcoming the Whistleblower's Dilemma via Zero-Knowledge Threshold Escrow Architecture&lt;/title&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">@page { size: 210mm 297mm; margin: 0; }</p>
-<p class="p1">*, *::before, *::after { box-sizing: border-box; }</p>
-<p class="p1">html, body { margin: 0; padding: 0; }</p>
-<p class="p1">html { background-color: #ffffff; }</p>
-<p class="p1">@media (prefers-color-scheme: dark) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>html { background-color: #0d1117; }</p>
-<p class="p1">}</p>
-<p class="p1">body {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 24px 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>max-width: 900px !important;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background: transparent !important;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: 'Times New Roman', Times, serif;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #111827;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.5;</p>
-<p class="p1">}</p>
-<p class="p1">.page {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>width: 210mm;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>min-height: 297mm;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 0 auto 12px auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 20mm 20mm 15mm 20mm;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background-color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid rgba(0, 0, 0, 0.12);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>flex-direction: column;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 10.5pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);</p>
-<p class="p1">}</p>
-<p class="p1">@media screen and (max-width: 600px) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>body { padding: 8px 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.page { width: 100%; margin: 0 auto; border: none; padding: 16px; box-shadow: none; }</p>
-<p class="p1">}</p>
-<p class="p1">.page-content { flex: 1 1 0; min-height: 0; }</p>
-<p class="p1">.page-content &gt; * + * { margin-top: 16px; }</p>
-<p class="p1">.page-footer {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>flex-shrink: 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-top: auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding-top: 4mm;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 8.5pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #4b5563;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border-top: 1px solid #d1d5db;</p>
-<p class="p1">}</p>
-<p class="p1">.paper-title {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 18pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.3;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 6px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #111827;</p>
-<p class="p1">}</p>
-<p class="p1">.paper-subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 11pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-style: italic;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #374151;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 14px;</p>
-<p class="p1">}</p>
-<p class="p1">.author-block {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 9.5pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #4b5563;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border-bottom: 1px solid #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding-bottom: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1">}</p>
-<p class="p1">.abstract-box {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 0 10px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 12px 16px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background: #f9fafb;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid #e5e7eb;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border-left: 4px solid #1d4ed8;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 9.5pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.45;</p>
-<p class="p1">}</p>
-<p class="p1">.abstract-title {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 8.5pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>letter-spacing: 0.05em;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom: 4px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #111827;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1">}</p>
-<p class="p1">h2 {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 11.5pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>letter-spacing: 0.03em;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>color: #111827;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border-bottom: 1px solid #111827;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding-bottom: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin-top: 18px;</p>
-<p class="p1">}</p>
-<p class="p1">p { margin: 0; text-align: justify; text-indent: 1.5em; }</p>
-<p class="p1">p.no-indent { text-indent: 0; }</p>
-<p class="p1">.cite { color: #1d4ed8; text-decoration: none; }</p>
-<p class="p1">.matrix-table {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border-collapse: collapse;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 12px 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 9pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1">}</p>
-<p class="p1">.matrix-table th, .matrix-table td {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid #d1d5db;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 6px 10px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>text-align: center;</p>
-<p class="p1">}</p>
-<p class="p1">.matrix-table th { background-color: #f3f4f6; font-weight: 600; }</p>
-<p class="p1">.diagram-box {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>background: #f8fafc;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>border: 1px solid #e2e8f0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: "Courier New", Courier, monospace;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 8pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>white-space: pre;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>overflow-x: auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.2;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 10px 0;</p>
-<p class="p1">}</p>
-<p class="p1">ol.references {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-size: 8.5pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>padding-left: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>line-height: 1.4;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
-<p class="p1">}</p>
-<p class="p1">ol.references li { margin-bottom: 6px; }</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- PAGE 1 --&gt;</p>
-<p class="p1">&lt;section class="page"&gt;</p>
-<p class="p1">&lt;div class="page-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="paper-title"&gt;Overcoming the Whistleblower's Dilemma via Zero-Knowledge Threshold Escrow Architecture&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="paper-subtitle"&gt;A Position Paper on Collective Action Protocols for Corporate Oversight&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="author-block"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;strong&gt;Anonymous Collective Action Protocol (ACAP) Working Group&lt;/strong&gt;&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Open Security &amp; Policy Research Series • October 2026</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="abstract-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="abstract-title"&gt;Abstract&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>Institutional whistleblowing suffers from a systemic collective action failure. Isolated insiders face severe asymmetric retaliation risks when reporting corporate wrongdoing, while traditional reporting mechanisms force a trade-off between dangerous early public exposure and easily suppressed internal channels. This paper proposes the &lt;strong&gt;Anonymous Collective Action Protocol (ACAP)&lt;/strong&gt;, an architectural framework leveraging Zero-Knowledge proofs (ZKPs), client-side metadata sanitization, and threshold escrow logic to align insider incentives. By withholding payload disclosures until a verified quorum (&lt;i&gt;N&lt;/i&gt; &amp;ge; &lt;i&gt;Threshold&lt;/i&gt;) is reached, ACAP neutralizes the first-mover disadvantage and guarantees safety in numbers.</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;1. Introduction &amp; Problem Statement&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="no-indent"&gt;Corporate wrongdoing relies fundamentally on information asymmetry and fear of retaliation. While modern legal frameworks—such as the EU Whistleblower Directive &lt;a class="cite" href="#ref-eu2019"&gt;(EU 2019/1937)&lt;/a&gt; and the US Sarbanes-Oxley Act—theoretically protect informants, empirical evidence indicates that lone whistleblowers face catastrophic career, financial, and personal consequences &lt;a class="cite" href="#ref-alford2001"&gt;(Alford, 2001)&lt;/a&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Existing channels force a flawed binary: internal compliance portals often lead to immediate employer monitoring, whereas open public leaks void statutory protections and expose individuals to defamation litigation. To resolve this, we present ACAP: a cryptographic escrow system designed to convert isolated individual disclosures into coordinated, threshold-verified collective action.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;2. Game-Theoretic Foundation&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="no-indent"&gt;Whistleblowing can be modeled as an &lt;i&gt;N&lt;/i&gt;-player Prisoner's Dilemma. Let &lt;i&gt;i&lt;/i&gt; &amp;in; {1, &amp;dots;, &lt;i&gt;N&lt;/i&gt;} represent insiders possessing evidence of systemic fraud. If player &lt;i&gt;i&lt;/i&gt; acts alone (&lt;i&gt;N&lt;/i&gt; = 1), the corporate entity concentrates 100% of its retaliatory resources on player &lt;i&gt;i&lt;/i&gt;. The payoff matrix heavily disincentivizes early disclosure.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;table class="matrix-table"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;thead&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;System State&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Individual Action&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Collective Quorum&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Expected Individual Payoff&lt;/th&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/thead&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;tbody&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Uncoordinated (Traditional)&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Solo Leak (&lt;i&gt;N&lt;/i&gt; = 1)&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Unmet&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Severe Retaliation / High Penalty&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Escrow Phase (ACAP &lt;i&gt;S&lt;/i&gt;&lt;sub&gt;0&lt;/sub&gt;)&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Encrypted Deposit&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;&lt;i&gt;N&lt;/i&gt; &amp;lt; &lt;i&gt;T&lt;/i&gt;&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Zero Risk / Zero Exposure&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Activation (ACAP &lt;i&gt;S&lt;/i&gt;&lt;sub&gt;1&lt;/sub&gt;)&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Automatic Dispatch&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;&lt;i&gt;N&lt;/i&gt; &amp;ge; &lt;i&gt;T&lt;/i&gt;&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;Protected Regulatory Disclosure&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/tbody&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;ACAP reshapes this payoff structure by introducing a &lt;i&gt;threshold escrow function&lt;/i&gt; &lt;i&gt;F&lt;/i&gt;(&lt;i&gt;D&lt;/i&gt;). Submissions &lt;i&gt;D&lt;sub&gt;i&lt;/sub&gt;&lt;/i&gt; remain encrypted and unreleased in state &lt;i&gt;S&lt;/i&gt;&lt;sub&gt;0&lt;/sub&gt; while &lt;i&gt;N&lt;/i&gt; &amp;lt; &lt;i&gt;T&lt;/i&gt; (where &lt;i&gt;T&lt;/i&gt; is the safety quorum). When &lt;i&gt;N&lt;/i&gt; &amp;ge; &lt;i&gt;T&lt;/i&gt;, state transitions to &lt;i&gt;S&lt;/i&gt;&lt;sub&gt;1&lt;/sub&gt;, releasing the consolidated dossier simultaneously to regulators and press networks. This eliminates the "first-mover penalty," ensuring no single participant stands exposed.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;footer class="page-footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;span&gt;ACAP Position Paper&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;span&gt;Page 1 of 2&lt;/span&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- PAGE 2 --&gt;</p>
-<p class="p1">&lt;section class="page"&gt;</p>
-<p class="p1">&lt;div class="page-content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;3. Technical &amp; Governance Architecture&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="no-indent"&gt;To ensure credibility without compromising anonymity, ACAP integrates three core technical guarantees:&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="diagram-box"&gt;</p>
-<p class="p1">[ User Client ] ---&gt; (1. ZK-DKIM Proof) ---&gt; [ Domain Verification ]</p>
-<p class="p1"><span class="Apple-converted-space">       </span>|</p>
-<p class="p1"><span class="Apple-converted-space">       </span>+-----------&gt; (2. WASM Sanitize) ---&gt; [ Stripped Metadata ]</p>
-<p class="p1"><span class="Apple-converted-space">       </span>|</p>
-<p class="p1"><span class="Apple-converted-space">       </span>+-----------&gt; (3. Threshold Escrow) -&gt; [ State S0: N &lt; T ]</p>
-<p class="p1"><span class="Apple-converted-space">                                                   </span>|</p>
-<p class="p1"><span class="Apple-converted-space">                                            </span>(Quorum Reached: N &gt;= T)</p>
-<p class="p1"><span class="Apple-converted-space">                                                   </span>|</p>
-<p class="p1"><span class="Apple-converted-space">                                                   </span>v</p>
-<p class="p1"><span class="Apple-converted-space">                                             </span>[ State S1: Public / Regulatory Release ]</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="no-indent" style="margin-top: 6px;"&gt;&lt;strong&gt;A. Anonymous Credential Verification:&lt;/strong&gt; To prevent competitor Sybil attacks without harvesting user identities, ACAP employs Zero-Knowledge DKIM (ZK-DKIM) circuit verification. Users prove ownership of a cryptographically signed corporate email header from target domain &lt;i&gt;d&lt;/i&gt;&lt;sub&gt;target&lt;/sub&gt; without revealing their specific mailbox address &lt;a class="cite" href="#ref-zkdkim2023"&gt;(Kang et al., 2023)&lt;/a&gt;.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="no-indent" style="margin-top: 6px;"&gt;&lt;strong&gt;B. Client-Side Sanitization:&lt;/strong&gt; Before payload transmission, local WebAssembly modules strip EXIF tags, author metadata, and steganographic watermarks, neutralizing corporate "canary file" tracking strategies.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="no-indent" style="margin-top: 6px;"&gt;&lt;strong&gt;C. Responsible Regulatory Routing:&lt;/strong&gt; Unlike unmoderated public forums, threshold activation routes dossiers directly to accredited enforcement agencies (e.g., SEC, national labor inspectorates) and investigative press consortia, preserving the reporter's legal immunity under international law.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;4. Policy Implications &amp; Legal Alignment&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="no-indent"&gt;By replacing public board posting with structured, threshold-gated regulatory dispatch, ACAP avoids host-side defamation liability while strengthening public interest oversight. Regulators receive pre-validated, high-signal evidentiary bundles representing multiple independent sources, significantly reducing investigative overhead while shielding vulnerable insiders.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;5. References&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;ol class="references"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li id="ref-alford2001"&gt;Alford, C. F. (2001). &lt;i&gt;Whistleblowers: Broken lives and organizational power&lt;/i&gt;. Cornell University Press.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li id="ref-eu2019"&gt;European Parliament and Council. (2019). Directive (EU) 2019/1937 on the protection of persons who report breaches of Union law. &lt;i&gt;Official Journal of the European Union&lt;/i&gt;.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li id="ref-zkdkim2023"&gt;Kang, S., Sora, K., &amp; Gurkan, A. (2023). Zero-Knowledge Proofs for Authenticated Email Attributes. &lt;i&gt;Journal of Cryptographic Engineering&lt;/i&gt;, 13(2), 145–158.&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ol&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;footer class="page-footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;span&gt;ACAP Position Paper&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;span&gt;Page 2 of 2&lt;/span&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<!-- PAGE 1 -->
+<section class="page">
+<div class="page-content">
+  <header>
+    <div class="paper-title">Overcoming the Whistleblower's Dilemma via Zero-Knowledge Threshold Escrow Architecture</div>
+    <div class="paper-subtitle">A Position Paper on Collective Action Protocols for Corporate Oversight</div>
+    <div class="author-block">
+      <strong>Anonymous Collective Action Protocol (ACAP) Working Group</strong><br>
+      Open Security & Policy Research Series • October 2026
+    </div>
+  </header>
+
+  <div class="abstract-box">
+    <div class="abstract-title">Abstract</div>
+    Institutional whistleblowing suffers from a systemic collective action failure. Isolated insiders face severe asymmetric retaliation risks when reporting corporate wrongdoing, while traditional reporting mechanisms force a trade-off between dangerous early public exposure and easily suppressed internal channels. This paper proposes the <strong>Anonymous Collective Action Protocol (ACAP)</strong>, an architectural framework leveraging Zero-Knowledge proofs (ZKPs), client-side metadata sanitization, and threshold escrow logic to align insider incentives. By withholding payload disclosures until a verified quorum (<i>N</i> &ge; <i>Threshold</i>) is reached, ACAP neutralizes the first-mover disadvantage and guarantees safety in numbers.
+  </div>
+
+  <section>
+    <h2>1. Introduction & Problem Statement</h2>
+    <p class="no-indent">Corporate wrongdoing relies fundamentally on information asymmetry and fear of retaliation. While modern legal frameworks—such as the EU Whistleblower Directive <a class="cite" href="#ref-eu2019">(EU 2019/1937)</a> and the US Sarbanes-Oxley Act—theoretically protect informants, empirical evidence indicates that lone whistleblowers face catastrophic career, financial, and personal consequences <a class="cite" href="#ref-alford2001">(Alford, 2001)</a>.</p>
+    <p>Existing channels force a flawed binary: internal compliance portals often lead to immediate employer monitoring, whereas open public leaks void statutory protections and expose individuals to defamation litigation. To resolve this, we present ACAP: a cryptographic escrow system designed to convert isolated individual disclosures into coordinated, threshold-verified collective action.</p>
+  </section>
+
+  <section>
+    <h2>2. Game-Theoretic Foundation</h2>
+    <p class="no-indent">Whistleblowing can be modeled as an <i>N</i>-player Prisoner's Dilemma. Let <i>i</i> &in; {1, &dots;, <i>N</i>} represent insiders possessing evidence of systemic fraud. If player <i>i</i> acts alone (<i>N</i> = 1), the corporate entity concentrates 100% of its retaliatory resources on player <i>i</i>. The payoff matrix heavily disincentivizes early disclosure.</p>
+
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>System State</th>
+          <th>Individual Action</th>
+          <th>Collective Quorum</th>
+          <th>Expected Individual Payoff</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Uncoordinated (Traditional)</td>
+          <td>Solo Leak (<i>N</i> = 1)</td>
+          <td>Unmet</td>
+          <td>Severe Retaliation / High Penalty</td>
+        </tr>
+        <tr>
+          <td>Escrow Phase (ACAP <i>S</i><sub>0</sub>)</td>
+          <td>Encrypted Deposit</td>
+          <td><i>N</i> &lt; <i>T</i></td>
+          <td>Zero Risk / Zero Exposure</td>
+        </tr>
+        <tr>
+          <td>Activation (ACAP <i>S</i><sub>1</sub>)</td>
+          <td>Automatic Dispatch</td>
+          <td><i>N</i> &ge; <i>T</i></td>
+          <td>Protected Regulatory Disclosure</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>ACAP reshapes this payoff structure by introducing a <i>threshold escrow function</i> <i>F</i>(<i>D</i>). Submissions <i>D<sub>i</sub></i> remain encrypted and unreleased in state <i>S</i><sub>0</sub> while <i>N</i> &lt; <i>T</i> (where <i>T</i> is the safety quorum). When <i>N</i> &ge; <i>T</i>, state transitions to <i>S</i><sub>1</sub>, releasing the consolidated dossier simultaneously to regulators and press networks. This eliminates the "first-mover penalty," ensuring no single participant stands exposed.</p>
+  </section>
+</div>
+<footer class="page-footer">
+  <span>ACAP Position Paper</span>
+  <span>Page 1 of 2</span>
+</footer>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+<div class="page-content">
+  <section>
+    <h2>3. Technical & Governance Architecture</h2>
+    <p class="no-indent">To ensure credibility without compromising anonymity, ACAP integrates three core technical guarantees:</p>
+
+    <div class="diagram-box">
+[ User Client ] ---> (1. ZK-DKIM Proof) ---> [ Domain Verification ]
+       |
+       +-----------> (2. WASM Sanitize) ---> [ Stripped Metadata ]
+       |
+       +-----------> (3. Threshold Escrow) -> [ State S0: N < T ]
+                                                   |
+                                            (Quorum Reached: N >= T)
+                                                   |
+                                                   v
+                                             [ State S1: Public / Regulatory Release ]
+    </div>
+
+    <p class="no-indent" style="margin-top: 6px;"><strong>A. Anonymous Credential Verification:</strong> To prevent competitor Sybil attacks without harvesting user identities, ACAP employs Zero-Knowledge DKIM (ZK-DKIM) circuit verification. Users prove ownership of a cryptographically signed corporate email header from target domain <i>d</i><sub>target</sub> without revealing their specific mailbox address <a class="cite" href="#ref-zkdkim2023">(Kang et al., 2023)</a>.</p>
+    <p class="no-indent" style="margin-top: 6px;"><strong>B. Client-Side Sanitization:</strong> Before payload transmission, local WebAssembly modules strip EXIF tags, author metadata, and steganographic watermarks, neutralizing corporate "canary file" tracking strategies.</p>
+    <p class="no-indent" style="margin-top: 6px;"><strong>C. Responsible Regulatory Routing:</strong> Unlike unmoderated public forums, threshold activation routes dossiers directly to accredited enforcement agencies (e.g., SEC, national labor inspectorates) and investigative press consortia, preserving the reporter's legal immunity under international law.</p>
+  </section>
+
+  <section>
+    <h2>4. Policy Implications & Legal Alignment</h2>
+    <p class="no-indent">By replacing public board posting with structured, threshold-gated regulatory dispatch, ACAP avoids host-side defamation liability while strengthening public interest oversight. Regulators receive pre-validated, high-signal evidentiary bundles representing multiple independent sources, significantly reducing investigative overhead while shielding vulnerable insiders.</p>
+  </section>
+
+  <section>
+    <h2>5. References</h2>
+    <ol class="references">
+      <li id="ref-alford2001">Alford, C. F. (2001). <i>Whistleblowers: Broken lives and organizational power</i>. Cornell University Press.</li>
+      <li id="ref-eu2019">European Parliament and Council. (2019). Directive (EU) 2019/1937 on the protection of persons who report breaches of Union law. <i>Official Journal of the European Union</i>.</li>
+      <li id="ref-zkdkim2023">Kang, S., Sora, K., & Gurkan, A. (2023). Zero-Knowledge Proofs for Authenticated Email Attributes. <i>Journal of Cryptographic Engineering</i>, 13(2), 145–158.</li>
+    </ol>
+  </section>
+</div>
+<footer class="page-footer">
+  <span>ACAP Position Paper</span>
+  <span>Page 2 of 2</span>
+</footer>
+</section>
+
 </body>
 </html>
